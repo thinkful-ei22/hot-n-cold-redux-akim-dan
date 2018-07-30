@@ -1,11 +1,6 @@
+
 import { createStore } from 'redux';
 
-import { guessReducer, feedbackReducer, resetReducer } from './reducers/reducer';
+import guessReducer from './reducers/reducer';
 
-const rootReducer = combineReducers({
-  guessReducer,
-  feedbackReducer,
-  resetReducer
-});
-
-export default createStore(rootReducer);
+export default createStore(guessReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

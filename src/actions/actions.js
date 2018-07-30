@@ -1,32 +1,23 @@
-// users can...
-
-// Guess Action
-// make Guesses()
 
 export const GUESS = 'GUESS';
-export const guessAction = (num) => ({
+export const guessAction = (guess) => ({
     type: GUESS,
-    num
+    guess
 })
-// see previous guesses()
-// receive a count of their previous guesses()
 
-// Feedback Action
-// receive feedback indicating hot, cold, and correctness()
 export const FEEDBACK = 'FEEDBACK'
 export const updateFeedback = (feedback) => ({
   type: FEEDBACK,
   feedback
 })
 
-// Reset action
-// start a new game()
+export const AURAL_STATUS = 'AURAL_STATUS'
+export const updateAuralStatus = (status) => ({
+  type: AURAL_STATUS,
+  status
+})
 
 export const RESET = 'RESET';
 export const resetGame = () => ({
   type: RESET
 })
-
-// Tutorial action
-// render and hide a tutorial() 
-
