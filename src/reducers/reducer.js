@@ -8,7 +8,7 @@ const initialState = {
   correctAnswer: Math.round(Math.random() * 100) + 1
 }
 
-const guessReducer = (action, state=InitialState) => {
+const guessReducer = (state=initialState, action) => {
   if (action.type === GUESS) {
     const newState = { ...state, guesses: [...state.guesses, action.guess]};
     return newState;
@@ -16,7 +16,7 @@ const guessReducer = (action, state=InitialState) => {
   return state;
 }
 
-const feedbackReducer = (action, state = InitialState) => {
+const feedbackReducer = (state=initialState, action) => {
   if (action.type === FEEDBACK) {
     const newState = { ...state, feedback: action.feedback };
     return newState;
@@ -24,14 +24,12 @@ const feedbackReducer = (action, state = InitialState) => {
   return state;
 }
 
-const resetReducer = (action, state = InitialState) => {
+const resetReducer = (state=initialState, action) => {
   if (action.type === RESET) {
     const newState = { ...state};
     return newState;
   }
   return state;
 }
-
-
 
 export { guessReducer, feedbackReducer, resetReducer }

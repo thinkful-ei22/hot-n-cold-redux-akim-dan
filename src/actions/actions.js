@@ -3,7 +3,7 @@
 // Guess Action
 // make Guesses()
 
-const GUESS = 'GUESS';
+export const GUESS = 'GUESS';
 export const guessAction = (num) => ({
     type: GUESS,
     num
@@ -13,7 +13,7 @@ export const guessAction = (num) => ({
 
 // Feedback Action
 // receive feedback indicating hot, cold, and correctness()
-const FEEDBACK = 'FEEDBACK'
+export const FEEDBACK = 'FEEDBACK'
 export const updateFeedback = (feedback) => ({
   type: FEEDBACK,
   feedback
@@ -22,7 +22,7 @@ export const updateFeedback = (feedback) => ({
 // Reset action
 // start a new game()
 
-const RESET = 'RESET';
+export const RESET = 'RESET';
 export const resetGame = () => ({
   type: RESET
 })
